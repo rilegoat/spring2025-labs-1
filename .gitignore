@@ -2,7 +2,7 @@
 .DS_Store
 
 # Ignore settings file
-settings.json
+.vscode/settings.json
 
 #ignore pycache
 __pycache__/
