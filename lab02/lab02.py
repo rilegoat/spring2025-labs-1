@@ -95,4 +95,5 @@ def best_hand_try():
             == ['7C', '7D', '7H', '7S', 'JD'])
     return 'test_best_hand passes'
 
-print(best_hand_try())
+if __name__ == '__main__':
+  print(best_hand_try())
