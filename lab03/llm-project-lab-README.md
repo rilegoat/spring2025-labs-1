@@ -4,11 +4,11 @@
 Large Language Models (LLMs) are a type of artificial intelligence model designed to understand and generate human language. These models are trained on vast amounts of text data and can perform a variety of tasks such as translation, summarization, question answering, and more. LLMs leverage deep learning techniques to capture the nuances of language, making them powerful tools for natural language processing applications.
 
 ## Course Project
-Create a DnD Dungeon Master to allow you to play DnD with your friends. The Dungeon Master will be able to generate a story, create NPC characters, manage the game world, and make appropriate changes to the player character sheets. The project will be broken down into several milestones, each building on the previous one to create a fully functional DnD Dungeon Master.
+Create an AI based DnD Dungeon Master (DM) to allow you to play DnD with your friends without needing someone to be a DM. The Dungeon Master will be able to generate a story, create NPC characters, manage the game world, and make appropriate changes to the player character sheets. The project will be broken down into several milestones, each building on the previous one to create a fully functional DnD Dungeon Master.
 
 Note: This project is designed to be a fun and interactive way to apply the concepts you have learned in the course. Feel free to get creative and experiment with different ideas to enhance the project.
 
-Note: You are free to not use DnD as the theme for your project. You can make it a general text-based adventure game if you prefer. But the project should use all the technologies that are expected in the project. Look at the project rubric for more details.
+Note: You are free to not use DnD as the theme for your project. You can make it a general text-based adventure game if you prefer or something else entirely. But the project should use all the technologies that are expected in the project. Look at the project rubric for more details.
 
 ## Capabilities of the DnD Dungeon Master
 1. Generate a random story
@@ -45,7 +45,7 @@ You will edit the file `lab03.md` with your reflections on the things that you t
 
 ## Lab03 Grading Rubric
 
-1. __Evidence of Iterative Improvement__: Measures how well each cycle builds on the previous, highlighting specific changes and improvements made along the way..
+1. __Evidence of Iterative Improvement__: Measures how well each iteration builds on the previous, highlighting specific changes and improvements made along the way.
 
 2. __Analytical Depth__: Looks at how thoroughly the student investigates the causes of issues or successes, using data or logical reasoning to guide conclusions.
 

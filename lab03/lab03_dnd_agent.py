@@ -7,6 +7,9 @@ from utils.llm_utils import pretty_stringify_chat, ollama_seed as seed
 
 # Add you code below
 sign_your_name = 'Pulin Agrawal'
+model = ''
+options = {}
+messages = []
 
 
 # But before here.
@@ -24,7 +27,11 @@ while True:
 
 # Save chat
 with open(Path('lab03/attempts.txt'), 'a') as f:
-  f.write('------------------------NEW ATTEMPT------------------------\n\n\n')
-  f.write(pretty_stringify_chat(messages))
-  f.write('\n\n\n------------------------END OF ATTEMPT------------------------\n\n\n')
+  file_string  = ''
+  file_string +=       '-------------------------NEW ATTEMPT-------------------------\n\n\n'
+  file_string += f'Model: {model}\n'
+  file_string += f'Options: {options}\n'
+  file_string += pretty_stringify_chat(messages)
+  file_string += '\n\n\n------------------------END OF ATTEMPT------------------------\n\n\n'
+  f.write(file_string)
 
