@@ -53,6 +53,8 @@ You will edit the file `lab03.md` with your reflections on the things that you t
 
 ## Example step
 
+The [Step 1](#step-1) section below shows the format that you can use to write your reflections. You can copy and paste this section into your `lab03.md` file and fill it out as you go along for each iterative step.
+
 ### Step 1
 #### Intention
 >What is the improvement that you intend to make?
