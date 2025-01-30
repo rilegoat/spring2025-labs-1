@@ -50,3 +50,19 @@ You will edit the file `lab03.md` with your reflections on the things that you t
 2. __Analytical Depth__: Looks at how thoroughly the student investigates the causes of issues or successes, using data or logical reasoning to guide conclusions.
 
 3. __Clarity of Ideas__: Focuses on how effectively the student communicates their thought process, ensuring the reflection is organized and easy to follow.
+
+## Example step
+
+### Step 1
+#### Intention
+>What is the improvement that you intend to make?
+
+#### Action/Change
+>Why do you think this action/change will improve the agent?
+
+#### Result
+>What was the result?
+
+#### Reflection/Analysis of the result. 
+>Why do you think it did or did not work?
+
