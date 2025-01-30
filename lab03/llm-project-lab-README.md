@@ -39,7 +39,10 @@ You will edit the file `lab03.md` with your reflections on the things that you t
 3. Ability to use an appropriate model and model parameters to improve the chat experience.
 
 ## Lab Task
-1. Add your reflection to `lab03.md`
+1. Add your reflection to `lab03.md`.
+> You can use the template in the [Step 1](#step-1) section below to structure your reflections. 
+
+> Here is a link to a [Markdown cheatsheet]( https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet) to help you with formatting your lab report.
 2. Add `lab03_dnd_agent.py`, `lab03.md` and `attempts.txt` to your commit.
 3. Submit your commit link to the lab03 submission on Canvas.
 
