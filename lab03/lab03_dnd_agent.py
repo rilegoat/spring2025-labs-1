@@ -7,7 +7,9 @@ from util.llm_utils import pretty_stringify_chat, ollama_seed as seed
 
 sign_your_name = 'Roland Grande'
 model = 'llama3.2'
-options = {'temperature' : 0.7}
+options = {'temperature' : 0.6,
+           'max_tokens' : 100
+           }
 messages = [
     {'role' : 'system', 'content' :   'You should emulate the prose and format of a Dungeons & Dragons Dungeon Master and be able to direct a single-player game as the Dungeon Master. You are only allowed to respond to Dungeons & Dragons related questions.'}
 ]
