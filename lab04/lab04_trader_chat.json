@@ -1,10 +1,10 @@
 {
   "model": "llama3.2",
   "options": {
-    "temperature": 0,
+    "temperature": 1,
     "max_tokens": 100
   },
   "messages": [
-      { "role": "system", "content": ""}
+      { "role": "system", "content": "You will act like a DnD character who is a wandering trader. User is a DnD who will try to trade with you. Your inventory consists of {{inventory}}. If the user asks for items, and those items are in your inventory, you will give those items to the user. Once you are done trading, you will respond by saying 'TRADE DONE'. For example: 'TRADE DONE"}
   ]
 }
