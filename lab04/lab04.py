@@ -21,16 +21,18 @@ def run_console_chat(sign, **kwargs):
             break
 
 lab04_params = {
-    'template_file': 'lab04_trader_chat.json',
-    'sign': 'Grande',
-    'end_regex': r'TRADE COMPLETE$'
+    "template_file": "lab04/lab04_trader_chat.json",
+    "inventory": ["mana potion", "health potion"],
+    "sign": "Grande",
+    "end_regex": r"TRADE(.*)DONE"
 }
 
 if __name__ ==  '__main__':
     # Run lab04.py to test your trader template
-    trader_template_file = 'lab04/lab04_trader_chat.json'
+    trader_template_file = "lab04/lab04_trader_chat.json"
     run_console_chat(
-        template_file=trader_template_file,
-        sign='Grande',
-        end_regex=r'TRADE COMPLETE$'
+        template_file="lab04/lab04_trader_chat.json",
+        inventory=["mana potion", "health potion"],
+        sign="Grande",
+        end_regex=r"TRADE(.*)DONE"
     )
