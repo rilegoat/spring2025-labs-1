@@ -33,7 +33,7 @@ RAG addresses several limitations of traditional LLMs:
 
 ## Getting Started
 ### Demo Script
-The `rag_demo.py` script shows RAG in action:
+The `lab08.py` script shows RAG in action:
 - Document loading and chunking using LangChain's text preprocessing utilities
 - Vector embedding using Ollama
 - Vector storage with ChromaDB
