@@ -76,13 +76,12 @@ lab08/
       - Refer to the [Ollama API](https://github.com/ollama/ollama-python) for more information
    - `retrieve_context()`
       - This function should use the ChromaDB collection to retrieve the top 3 most relevant context chunks for a given query
-      - Refer to the [ChromaDB Retrieval API](https://docs.trychroma.com/reference/retrieval) for more information
+      - Refer to the [ChromaDB Retrieval API](https://docs.trychroma.com/docs/querying-collections/query-and-get) for more information
 3. run the script to see the RAG in action
 
 ## References and Further Reading
 - [LangChain RAG Documentation](https://python.langchain.com/docs/use_cases/question_answering/)
-- [ChromaDB Documentation](https://docs.trychroma.com/)
-- [ChromaDB Text Preprocessing](https://docs.trychroma.com/reference/text-preprocessing)
+- [ChromaDB Documentation](https://docs.trychroma.com/docs)
 - [Ollama GitHub Repository](https://github.com/ollama/ollama)
 - [Ollama API](https://github.com/ollama/ollama-python)
 - [RAG Paper: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"](https://arxiv.org/abs/2005.11401) 
