@@ -86,3 +86,4 @@ lab08/
 - [Ollama GitHub Repository](https://github.com/ollama/ollama)
 - [Ollama API](https://github.com/ollama/ollama-python)
 - [RAG Paper: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"](https://arxiv.org/abs/2005.11401) 
+- [Evaluating Text Chunking Strategies](https://research.trychroma.com/evaluating-chunking)
