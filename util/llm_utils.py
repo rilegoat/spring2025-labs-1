@@ -3,6 +3,7 @@ import json
 import ollama
 import hashlib
 import logging
+import random
 
 from pathlib import Path
 from types import MethodType
@@ -49,6 +50,11 @@ def run_console_chat(**kwargs):
                 ending_match = e.value[1]
                 print('Ending match:', ending_match)
             break
+
+def roll_d20(reason=""):                                        # tool call to roll a d20
+    result = random.randint(1, 20)                              # random value between 1 and 20
+    print(f"\n[TOOL] Rolled a D20 for '{reason}': {result}\n")  # include the reason so that the system knows what it's in reference to
+    return {"roll": result, "reason": reason}
 
 class TemplateChat:
     def __init__(self, template, sign=None, **kwargs):
