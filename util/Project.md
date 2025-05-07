@@ -17,14 +17,10 @@ This model was chosen because it excels in narrative storytelling, which felt be
 <li><b>max_tokens: 600</b> - By having a max token count of 600 per message, this ensures generated responses are not so large than the model hangs up indefinitely, but also are long enough to further the world-building and story-telling of the game.
 </ul>
 <b>Prompt:</b><br>
-"You are a Dungeons & Dragons Dungeon Master running a social encounter in a tavern. Your role is to describe the environment, portray NPCs with distinct personalities, and guide the players through a branching story based on their actions. Never break the fourth wall. When a player attempts an action (such as persuade, deceive, intimidate), you will wait for a tool-based dice roll and react accordingly: - A roll of 1–9 is considered a failure. - A roll of 10–14 is a partial success. - A roll of 15–20 is a strong success. Make your responses immersive and flavorful. End every message with a prompt for the players to speak or act. Use medieval fantasy tone and vivid descriptions. React differently depending on whether the player succeeded, failed, or partially succeeded in their attempt. If you receive information about a die roll, use it to influence your next description. Always stay in character as the Dungeon Master." <br>
+"You are a Dungeons & Dragons Dungeon Master running a social encounter in a tavern. Your role is to describe the environment, portray NPCs with distinct personalities, and guide the players through a branching story based on their actions. Never break the fourth wall. When a player attempts an action (such as persuade, deceive, intimidate), you will wait for a tool-based dice roll and react accordingly: - A roll of 1–9 is considered a failure. - A roll of 10–14 is a partial success. - A roll of 15–20 is a strong success. Make your responses immersive and flavorful. End every message with a prompt for the players to speak or act. Use medieval fantasy tone and vivid descriptions. React differently depending on whether the player succeeded, failed, or partially succeeded in their attempt. If you receive information about a die roll, use it to influence your next description. Always stay in character as the Dungeon Master." <br><br>
 
-Several iterations of prompt engineering led to the prompt stated above, having several safeguards to prevent the model from diverging from its intended purpose. Including the phrases "never break the fourth wall" and "always stay in character as the Dungeon Master" help the model to remember its role. Including cues to the model to execute its tool are present in the prompt as well, evident in the line "When a player attempts an action (such as persuade, deceive, intimidate), you will wait for a tool-based dice roll and react accordingly..." This cues the tool (explained below) to execute, which performs the dice roll and returns the value to the model.
-<br>
-
-### Tool: D20 Roll
-(fill this in after work)
-
+Several iterations of prompt engineering led to the prompt stated above, having several safeguards to prevent the model from diverging from its intended purpose. Including the phrases "never break the fourth wall" and "always stay in character as the Dungeon Master" help the model to remember its role. Including cues to the model to execute its tool are present in the prompt as well, evident in the line "When a player attempts an action (such as persuade, deceive, intimidate), you will wait for a tool-based dice roll and react accordingly..." This cues the tool (explained in Section 2) to execute, which performs the dice roll and returns the value to the model.
+<br><br>
 
 ### Scenario 1: The Booming Bartender
 <b>Scenario:</b> The party approaches a bar with a grizzly bartender standing at it, conversing with customers about a mysterious veiled figure.<br><br>
@@ -48,3 +44,15 @@ Several iterations of prompt engineering led to the prompt stated above, having 
 <li> <b>Roll 15-20 (Strong success):</b> Tensions are fully relieved and the dwarves beome jovial, thanking the player and offering to buy the party a round of drinks using the fruits of their mining expedition.</ul>
 
 # Section 2: Implementation of D20 Roll
+
+### Tool: D20 Roll
+To really encompass the role of a Dungeons & Dragons Dungeon Master, it was necessary to create a tool that mimicked the action of rolling a D20 for skill checks. To achieve this, I wrote a tool that the model will call which simulates rolling a 20-sided die. This tool is called when the Dungeon Master recognizes the player's response as taking action to do something, or attempting to do something risky. When the model recognizes this, it calls the "d20\_roll" tool, written in llm\_utils.py. This tool will randomly generate an integer between 1 and 20 and return it to the model along with the skill it's evaluating (such as perception, stealth, intuition, etc). The code block for this function can be viewed below: <br>
+
+```python 
+def roll_d20(reason=""):                                        # tool call to roll a d20
+    result = random.randint(1, 20)                              # random value between 1 and 20
+    print(f"\n[TOOL] Rolled a D20 for '{reason}': {result}\n")  # include the reason so that the system knows what it's in reference to
+    return {"roll": result, "reason": reason}
+```
+
+As mentioned previously, the main benefit of tool-calling is the added rigidity of responses to an otherwise volatile response system that is innate to AI models. In other words, by writing and calling tools, you can follow rigid rule systems/logic that will return formatted responses each time, or help calculate logic as part of greater systems.
