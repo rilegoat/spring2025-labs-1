@@ -56,3 +56,27 @@ def roll_d20(reason=""):                                        # tool call to r
 ```
 
 As mentioned previously, the main benefit of tool-calling is the added rigidity of responses to an otherwise volatile response system that is innate to AI models. In other words, by writing and calling tools, you can follow rigid rule systems/logic that will return formatted responses each time, or help calculate logic as part of greater systems.
+
+# How to Use
+
+To use and test this project for yourself, first clone this repository.<br>
+After cloning the repository, open the project folder in your IDE of course, ensuring Python and ollama are installed.<br>
+Once it's been verified that both Python and ollama are installed, run
+```python
+ollama pull starling-lm
+```
+in your terminal. This will install the `starling-lm` model, which is what this project uses.<br>
+Once the `starling-lm` model finished installing, open two terminal windows side-by-side. In one terminal, run the following commands:
+```python
+cd util  
+python game.py
+```
+This will start a room with a ten-second timer before the game begins. During this timer, run these commands in another terminal:
+```python
+cd util
+python player.py
+```
+This will access the game during its matchmaking phase as a player. You will join the game with the name "Roland" (my name) and will then wait for the Dungeon Master (the `game.py` instance) to broadcast its generated prompt. This may take some time depending on how powerful your computer is. After each generated prompt, you will have an opportunity as the player (the `player.py` instance) to respond to the model. Type your response, and hit enter. This will send your response back to the model, which it will read and respond to---likely taking a similar amount of time to the initial prompt generation. If you'd like to quit playing at any point, you may type `/quit` into the terminal.
+
+## Concluding Remarks
+Thank you to Professor Agrawal of Penn State Behrend for teaching the CMPSC 441/GAME 450 class that this project was built for. It taught me lots about LLMs and how to harness their power for projects such as these. I'm grateful to have touched up my Python skills in the process by creating this small Dungeons & Dragons style project!
